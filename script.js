@@ -197,3 +197,37 @@ window.onload = () => {
 
   animate();
 };
+
+let devUnlocked = false;
+const keysPressed = new Set();
+
+document.addEventListener("keydown", (e) => {
+  keysPressed.add(e.key.toLowerCase());
+
+  const ctrlHeld = e.ctrlKey;
+  const d = keysPressed.has("d");
+  const eKey = keysPressed.has("e");
+  const v = keysPressed.has("v");
+
+  if (ctrlHeld && d && eKey && v) {
+    devUnlocked = true;
+    console.log("✅ DevTools UNLOCKED");
+  }
+
+  if (e.key === "F12" && !devUnlocked) {
+    e.preventDefault();
+  }
+
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i" && !devUnlocked) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("keyup", (e) => {
+  keysPressed.delete(e.key.toLowerCase());
+});
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About LunarMoon | Về LunarMoon</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <canvas id="space-bg"></canvas>
+  <div id="blurbg"></div>
+
+  
+  <div id="intro-screen">
+    <h1>Click anywhere to continue</h1>
+    <p class="intro-subtext">Nhấn bất kì nơi nào để tiếp tục</p>
+  </div>
+
+  <audio id="bg-music" src="assets/music1.mp3" loop></audio>
+
+  <div id="toggle-sound" style="display: none;">
+    🔊
+    <div id="sound-control">
+      <span class="track-name">🎵 Đi cùng anh khắp thế giới - Đặng Minh, Harvey Nelson</span>
+      <div class="volume-control">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" />
+        <span id="volume-label">100%</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="music-credit" style="display: none;">
+    <div class="credit-header">
+      <span>Now playing</span>
+      <button id="credit-close">✖</button>
+    </div>
+    <div class="credit-body">
+      🎵 Đi cùng anh khắp thế giới - Đặng Minh, Harvey Nelson
+    </div>
+  </div>
+
+  <nav class="nav-bar" style="display: none;">
+    <button class="nav-btn active" style="animation-delay: 0.2s;" data-target="about">About</button>
+    <button class="nav-btn" style="animation-delay: 4s;" data-target="socials">Socials</button>
+  </nav>
+
+  <div class="container" style="display: none;">
+    <div class="avatar-section">
+      <img src="assets/avatar.png" alt="Avatar" class="avatar" />
+      <h1 class="name">LunarMoon</h1>
+    </div>
+
+    <div id="about" class="tab-content active">
+      <div class="info-section">
+        <div class="title"><span>About Me</span></div>
+        <p class="description">
+          I am LunarMoon, a Vietnamese guy. I am a very lazy programmer.<br/>
+          The programming languages I use are Java and Python
+        </p>
+      </div>
+    </div>
+
+    <div id="socials" class="tab-content">
+      <div class="socials-section">
+        <div class="title"><span>Socials</span></div>
+        <div class="social-icons">
+          <a href="https://discord.com/users/1182279772571717632" target="_blank" class="social-btn" data-tooltip="Discord">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS099NB4G7rZWcWOHVjZ9Ybmy37A1XMHfOouA&s" alt="Discord" />
+          </a>
+          <a href="https://github.com/LunarMoonDLCT" target="_blank" class="social-btn" data-tooltip="GitHub">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/56ddcf59-3cb4-4f3d-851e-91ec86e67871/df9xsq7-bf213b05-8c95-4b5e-a8aa-718d329ab707.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU2ZGRjZjU5LTNjYjQtNGYzZC04NTFlLTkxZWM4NmU2Nzg3MVwvZGY5eHNxNy1iZjIxM2IwNS04Yzk1LTRiNWUtYThhYS03MThkMzI5YWI3MDcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.JqWg86lcEsOoA6coTgFxHRob6hSMhHdbDbBeRpwpGww" alt="GitHub" />
+          </a>
+          <a href="https://youtube.com/@LunarMoonDLCT8116" target="_blank" class="social-btn" data-tooltip="YouTube">
+            <img src="https://img.favpng.com/2/15/7/pixel-art-vector-graphics-video-games-png-favpng-jCe0nkCkWHwwUCqSxTCCJrUnZ.jpg" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -231,3 +231,8 @@ document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
 });
 
+document.querySelectorAll("img").forEach(img => {
+  img.addEventListener("dragstart", e => e.preventDefault());
+});
+
+

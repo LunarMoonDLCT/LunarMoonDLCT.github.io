@@ -165,6 +165,13 @@ body {
   object-fit: cover;
 }
 
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  pointer-events: auto;
+}
+
 .name {
   font-size: 2.5rem;
   font-weight: bold;
@@ -601,6 +608,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
 

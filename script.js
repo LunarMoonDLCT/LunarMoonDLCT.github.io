@@ -31,6 +31,8 @@ window.onload = () => {
     }
   });
 
+  console.warn("LunarMoon was here");
+
   toggleBtn.addEventListener("click", (event) => {
     if (event.target.closest("#sound-control")) return;
 
@@ -240,3 +242,4 @@ document.addEventListener("contextmenu", function (e) {
 document.querySelectorAll("img").forEach(img => {
   img.addEventListener("dragstart", e => e.preventDefault());
 });
+

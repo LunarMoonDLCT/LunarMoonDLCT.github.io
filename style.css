@@ -15,12 +15,19 @@ body {
 }
 
 .container {
-  position: relative; 
+  min-height: 300px; 
+  padding: 20px;
+  display: flex;
+  max-width: none;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   animation: fadeSlideUp 0.6s ease-out forwards;
-  opacity: 0;
-  transform: translateY(30px);
+  justify-content: center;
+  position: relative;
 }
+
+
 
 .nav-bar {
   position: fixed;
@@ -118,30 +125,21 @@ body {
 #socials {
   transition: opacity 0.4s ease, transform 0.4s ease;
   opacity: 0;
+  display: none;
   transform: translateY(20px);
   pointer-events: none;
   position: absolute;
-  width: 100%; 
-  left: 0;
+  width: 150%; 
+  left: -26%;
 }
 
-
-#about,
-#socials {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
 
 #about.active,
 #socials.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  position: relative;
+  position: absolute;
 }
 
 .avatar-section {
@@ -185,7 +183,7 @@ img {
 }
 
 .info-section {
-  margin-top: 20px;
+  margin-top: 5px;
   animation: fadeSlideUp 0.6s ease-out 0.4s forwards;
   opacity: 0;
   transform: translateY(30px);
@@ -527,7 +525,7 @@ img {
 }
 
 .socials-section {
-  margin-top: 40px;
+  margin-top: 5px;
   animation: fadeSlideUp 0.6s ease-out 0.6s forwards;
   opacity: 0;
   transform: translateY(30px);
@@ -559,14 +557,14 @@ img {
   box-shadow:
     0 0 6px rgba(255, 255, 255, 0.4),
     0 0 12px rgba(138, 43, 226, 0.3),
-    0 0 18px rgba(0, 191, 255, 0.2); /* ✨ glow nhẹ */
+    0 0 18px rgba(0, 191, 255, 0.2);
 }
 
 .social-btn:hover img {
   box-shadow:
     0 0 10px rgba(255, 255, 255, 0.8),
     0 0 20px rgba(138, 43, 226, 0.6),
-    0 0 30px rgba(0, 191, 255, 0.4); /* 💥 glow mạnh khi hover */
+    0 0 30px rgba(0, 191, 255, 0.4);
   transform: scale(1.05);
 }
 

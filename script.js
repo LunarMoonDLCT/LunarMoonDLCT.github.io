@@ -81,7 +81,6 @@ window.onload = () => {
 
       music.currentTime = 0;
       const playPromise = music.play();
-
       if (playPromise !== undefined) {
         playPromise.catch((e) => {
           console.warn("Autoplay bị chặn:", e);
@@ -119,20 +118,27 @@ window.onload = () => {
   const socialsSection = document.getElementById("socials");
 
   aboutSection.classList.add("active");
+  aboutSection.style.display = "block";
+  socialsSection.style.display = "none";
 
   navButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       navButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      aboutSection.classList.remove("active");
-      socialsSection.classList.remove("active");
+      const showSection = btn.dataset.target === "about" ? aboutSection : socialsSection;
+      const hideSection = btn.dataset.target === "about" ? socialsSection : aboutSection;
 
-      if (btn.dataset.target === "about") {
-        aboutSection.classList.add("active");
-      } else {
-        socialsSection.classList.add("active");
-      }
+      showSection.style.display = "block";
+      requestAnimationFrame(() => {
+        showSection.classList.add("active");
+      });
+
+      hideSection.classList.remove("active");
+\
+      setTimeout(() => {
+        hideSection.style.display = "none";
+      }, 400);
     });
   });
 
@@ -234,5 +240,3 @@ document.addEventListener("contextmenu", function (e) {
 document.querySelectorAll("img").forEach(img => {
   img.addEventListener("dragstart", e => e.preventDefault());
 });
-
-

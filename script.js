@@ -135,7 +135,7 @@ window.onload = () => {
       });
 
       hideSection.classList.remove("active");
-\
+
       setTimeout(() => {
         hideSection.style.display = "none";
       }, 400);
